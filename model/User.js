@@ -18,6 +18,12 @@ const userSchema = new mongoose.Schema({
         min : 6,
         max : 1024
     },
+    birthdate:{
+        type:String,
+        required:true,
+        max : 100
+
+    },
     date : {
         type : Date,
         default : Date.now()

@@ -19,11 +19,19 @@ const postSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
+    votes:{
+        type:Number,
+        default:0
+
+    },
     _created_by: {
         type: Schema.ObjectId, 
         ref : 'User'
     }
 
 });
- 
+
+
+
 module.exports =  mongoose.model('Post' , postSchema);
+
